@@ -15,7 +15,6 @@
       --navy: #073b7a;
       --blue: #0879e8;
       --blue-dark: #0563bf;
-      --sky: #eaf6ff;
       --sky-soft: #f6fbff;
       --ink: #15263d;
       --muted: #607087;
@@ -45,11 +44,6 @@
     a {
       color: inherit;
       text-decoration: none;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
     }
 
     a:focus-visible {
@@ -87,7 +81,6 @@
       color: var(--navy);
       font-size: 1.04rem;
       font-weight: 600;
-      letter-spacing: -0.01em;
     }
 
     .brand-mark {
@@ -131,11 +124,6 @@
       font-weight: 500;
     }
 
-    .nav-cta:hover {
-      border-color: var(--blue);
-      background: #eaf6ff;
-    }
-
     main {
       overflow: hidden;
     }
@@ -154,7 +142,6 @@
       z-index: -1;
       border-radius: 50%;
       content: "";
-      filter: blur(2px);
     }
 
     .hero::before {
@@ -248,7 +235,7 @@
       border-radius: 12px;
       font-size: 0.98rem;
       font-weight: 500;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .button:hover {
@@ -261,19 +248,10 @@
       box-shadow: 0 10px 20px rgba(8, 121, 232, 0.22);
     }
 
-    .button-primary:hover {
-      box-shadow: 0 14px 25px rgba(8, 121, 232, 0.29);
-    }
-
     .button-secondary {
       border-color: #c9e5fb;
       color: var(--blue-dark);
       background: rgba(255, 255, 255, 0.76);
-    }
-
-    .button-secondary:hover {
-      background: var(--white);
-      box-shadow: 0 9px 18px rgba(16, 92, 162, 0.09);
     }
 
     .button svg {
@@ -407,18 +385,6 @@
       background: linear-gradient(155deg, #dff3ff 0%, #eaf8ff 45%, #c5e8fb 100%);
     }
 
-    .door-scene::before {
-      position: absolute;
-      top: 15px;
-      left: 22px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #fbd36a;
-      box-shadow: 37px 18px 0 -2px rgba(255, 255, 255, 0.85), 186px 10px 0 -3px rgba(255, 255, 255, 0.8);
-      content: "";
-    }
-
     .floor {
       position: absolute;
       bottom: 0;
@@ -490,16 +456,6 @@
       height: 11px;
       border: 2px solid #ffffff;
       border-radius: 50%;
-      content: "";
-    }
-
-    .sensor::after {
-      position: absolute;
-      top: 16px;
-      right: -25px;
-      width: 23px;
-      height: 1px;
-      border-top: 1px dashed #2584bc;
       content: "";
     }
 
@@ -605,7 +561,6 @@
       font-size: clamp(1.85rem, 3.2vw, 2.65rem);
       font-weight: 600;
       line-height: 1.25;
-      letter-spacing: -0.025em;
     }
 
     .section-heading p:last-child {
@@ -664,7 +619,6 @@
     }
 
     .project-section {
-      position: relative;
       padding: 95px 0;
       background: var(--sky-soft);
     }
@@ -694,7 +648,8 @@
       content: "";
     }
 
-    .project-copy {
+    .project-copy,
+    .project-info {
       position: relative;
       z-index: 1;
     }
@@ -742,8 +697,6 @@
     }
 
     .project-info {
-      position: relative;
-      z-index: 1;
       display: grid;
       grid-template-columns: 1fr 1fr;
       overflow: hidden;
@@ -1027,7 +980,6 @@
   </header>
 
   <main id="top">
-    <!-- ส่วนที่ 1: แนะนำโครงงาน -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-content">
@@ -1040,36 +992,33 @@
           <div class="hero-actions">
             <a class="button button-primary" href="#features">
               ดูจุดเด่นของระบบ
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg>
             </a>
             <a class="button button-secondary" href="#project">ข้อมูลโครงงาน</a>
           </div>
 
           <div class="hero-points" aria-label="คุณสมบัติเด่น">
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>
-              ตรวจจับสถานะประตู
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>
-              แจ้งเตือนอย่างชัดเจน
-            </span>
-            <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>
-              ใช้งานเข้าใจง่าย
-            </span>
+            <span>✓ ตรวจจับสถานะประตู</span>
+            <span>✓ แจ้งเตือนอย่างชัดเจน</span>
+            <span>✓ ใช้งานเข้าใจง่าย</span>
           </div>
         </div>
 
         <div class="product-visual" aria-label="ภาพจำลองระบบตรวจสอบประตูเครื่องจักร" role="img">
           <div class="visual-glow"></div>
+
           <div class="machine-card">
             <div class="machine-topbar">
               <span class="machine-brand"><span class="mini-mark"></span>DOOR MONITOR</span>
               <span class="live-indicator">พร้อมทำงาน</span>
             </div>
+
             <div class="machine-body">
               <div class="screen-status">สถานะประตู: ปิดสนิท <span></span></div>
+
               <div class="door-scene">
                 <div class="machine-frame">
                   <div class="machine-door"></div>
@@ -1077,23 +1026,31 @@
                 </div>
                 <span class="floor"></span>
               </div>
+
               <div class="machine-summary">
-                <div class="summary-item"><small>เซนเซอร์</small><strong>ตรวจสอบปกติ</strong></div>
-                <div class="summary-item"><small>การแจ้งเตือน</small><strong>พร้อมใช้งาน</strong></div>
+                <div class="summary-item">
+                  <small>เซนเซอร์</small>
+                  <strong>ตรวจสอบปกติ</strong>
+                </div>
+                <div class="summary-item">
+                  <small>การแจ้งเตือน</small>
+                  <strong>พร้อมใช้งาน</strong>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="alert-note">
-            <span class="alert-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg>
+            <span class="alert-icon" aria-hidden="true">🔔</span>
+            <span>
+              <strong>แจ้งเตือนทันที</strong>
+              <small>เมื่อพบการเปิดประตู</small>
             </span>
-            <span><strong>แจ้งเตือนทันที</strong><small>เมื่อพบการเปิดประตู</small></span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ส่วนที่ 2: จุดเด่นและหลักการทำงาน -->
     <section class="feature-section" id="features" aria-labelledby="features-title">
       <div class="container">
         <div class="section-heading">
@@ -1104,25 +1061,19 @@
 
         <div class="feature-grid">
           <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10V7a2 2 0 0 0-2-2h-3"></path><path d="M3 10V7a2 2 0 0 1 2-2h3"></path><path d="M21 14v3a2 2 0 0 1-2 2h-3"></path><path d="M3 14v3a2 2 0 0 0 2 2h3"></path><path d="M8 12h8"></path></svg>
-            </div>
+            <div class="feature-icon">⌁</div>
             <h3>ตรวจจับสถานะประตู</h3>
             <p>ตรวจสอบการเปลี่ยนแปลงของประตูเครื่องจักร เพื่อให้ทราบสถานะการเปิดหรือปิดในจุดปฏิบัติงาน</p>
           </article>
 
           <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path><path d="M12 3V1"></path></svg>
-            </div>
+            <div class="feature-icon">🔔</div>
             <h3>แจ้งเตือนอย่างชัดเจน</h3>
             <p>เมื่อเกิดเหตุ ระบบช่วยส่งสัญญาณแจ้งเตือนให้ผู้เกี่ยวข้องรับรู้และสามารถตรวจสอบสถานการณ์ได้รวดเร็ว</p>
           </article>
 
           <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"></path><path d="M12 7v5l3 2"></path><path d="M19 3v4h-4"></path></svg>
-            </div>
+            <div class="feature-icon">◷</div>
             <h3>สนับสนุนการทำงานปลอดภัย</h3>
             <p>ช่วยเตือนให้เกิดความระมัดระวังและส่งเสริมแนวทางการใช้งานเครื่องจักรอย่างเป็นระบบ</p>
           </article>
@@ -1130,7 +1081,6 @@
       </div>
     </section>
 
-    <!-- ส่วนที่ 3: รายละเอียดโครงงาน -->
     <section class="project-section" id="project" aria-labelledby="project-title">
       <div class="container">
         <div class="project-panel">
@@ -1140,10 +1090,11 @@
             <p>
               โครงงานนี้จัดทำขึ้นเพื่อประยุกต์ใช้ความรู้ด้านเซนเซอร์ในงานอุตสาหกรรม และนำเสนอแนวคิดการเฝ้าระวังการเปิดประตูเครื่องจักรอย่างเหมาะสม
             </p>
+
             <ul class="benefit-list">
-              <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg></span>ส่งเสริมความตระหนักด้านความปลอดภัย</li>
-              <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg></span>ประยุกต์ใช้เซนเซอร์กับสถานการณ์จริง</li>
-              <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg></span>นำเสนอข้อมูลสำคัญในรูปแบบที่เข้าใจง่าย</li>
+              <li><span>✓</span>ส่งเสริมความตระหนักด้านความปลอดภัย</li>
+              <li><span>✓</span>ประยุกต์ใช้เซนเซอร์กับสถานการณ์จริง</li>
+              <li><span>✓</span>นำเสนอข้อมูลสำคัญในรูปแบบที่เข้าใจง่าย</li>
             </ul>
           </div>
 
@@ -1152,22 +1103,27 @@
               <span class="info-label">ชื่อโครงงาน</span>
               <strong class="info-value">เครื่องแจ้งเตือนการเปิดประตูเครื่องจักร</strong>
             </div>
+
             <div class="info-item">
               <span class="info-label">จัดทำโดย</span>
               <strong class="info-value">นายทีรธร กาญจนวิวิญ</strong>
             </div>
+
             <div class="info-item">
               <span class="info-label">รายวิชา</span>
               <strong class="info-value">20105-2022<br>พื้นฐานเซนเซอร์ในงานอุตสาหกรรม</strong>
             </div>
+
             <div class="info-item">
               <span class="info-label">ระดับชั้น</span>
               <strong class="info-value">ปวช.2<br>แผนกวิชาช่างเทคนิคคอมพิวเตอร์</strong>
             </div>
+
             <div class="info-item">
               <span class="info-label">สถานศึกษา</span>
               <strong class="info-value">วิทยาลัยเทคนิคตรัง</strong>
             </div>
+
             <div class="info-item">
               <span class="info-label">แนวคิดหลัก</span>
               <strong class="info-value">Safety · Awareness · Sensor</strong>
@@ -1181,9 +1137,7 @@
   <footer class="site-footer">
     <div class="container footer-wrap">
       <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V5.8A1.8 1.8 0 0 1 6.8 4H15v17"></path><path d="M15 8h2.2A1.8 1.8 0 0 1 19 9.8V21"></path><path d="M3 21h18"></path><path d="M11 12h.01"></path></svg>
-        </span>
+        <span class="brand-mark">⌂</span>
         เครื่องแจ้งเตือนการเปิดประตูเครื่องจักร
       </div>
       <p class="footer-note">โครงงานรายวิชา 20105-2022 · วิทยาลัยเทคนิคตรัง</p>
